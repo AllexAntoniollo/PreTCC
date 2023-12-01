@@ -1,0 +1,129 @@
+%----------------------------------------------------------------------------------
+% Exemplo do uso da classe tcc.cls. Veja o arquivo .cls
+% para mais detalhes e instruções.
+%----------------------------------------------------------------------------------
+\chapter{Introdução}
+\label{chap:intro}
+% Comando para inserir siglas. As siglas devem aparecer em ordem ALFABÉTICA nas listas
+% correspondentes. Como a classe no momento não é capaz de ordenar
+% as entradas automaticamente, existem duas alternativas:
+%
+%    a- Insira todas as siglas no começo do texto,
+%    manualmente e em ordem alfabética.
+%
+%    b- Caso esteja em um ambiente UNIX (Linux, Mac ou Cygwin/similares),
+%    utilize o script sort.sh e o makefile que acompanham a
+%    classe. O makefile automaticamente compila a monografia para
+%    PDF (mas assume que o latex está acessível pela linha de
+%    comando). Neste caso a ordenação é feita de forma automática.
+%
+\sigla{btc}{Bitcoin}
+\sigla{BC}{Blockchain}
+\sigla{SM}{Smart Contract}
+\sigla{ZKP}{Zero-Knowledge Proof}
+\sigla{DAAPS}{Aplicações Descentralizadas}
+\sigla{DAOs}{Organizações Autônomas Descentralizadas}
+\sigla{GGA}{Gas Griefing Attack}
+
+
+
+%
+%
+% Comando para inserir símbolos. Estes irão aparecer em ordem
+% de ocorrência, já que o número da página está presente na lista
+% de símbolos.
+
+
+\begin{itemize}
+\item Introdução e Contextualização
+	\begin{itemize}
+ \item             Definição e Conceitos Básicos de Blockchain 
+          \item História e Evolução da Tecnologia Blockchain
+	   \item Princípios Fundamentais da Blockchain 
+	   \item Smart Contracts: Fundamentos e Definições
+	   \item Funcionamento e Aplicações Práticas
+
+        \end{itemize}
+\item Contratos Inteligentes e Privacidade: 
+	\begin{itemize}
+            \item Características dos Contratos Inteligentes
+     \item Privacidade em Contratos Inteligentes 
+        \end{itemize}
+\item Riscos de Segurança em Contratos Inteligentes:
+	\begin{itemize}	
+            \item Ataques e Fraudes em Contratos Inteligentes
+	    \item Exemplo de ataques bem sucedidos
+     \item Vulnerabilidade Comum
+     \item Gerenciamento de Risco em Smart Contracts
+     \item Práticas Recomendadas para Mitigação de Risco
+
+	\end{itemize}
+
+\end{itemize}
+
+
+
+\section{\label{sec:secao1}Definição e Conceitos Básicos de Blockchain}
+A blockchain representa uma forma de estrutura de dados em cadeia, onde cada bloco recém-criado é incorporado à cadeia existente, aumentando assim o tamanho global da rede. Cada bloco contém dados e informações que estão intrinsecamente interligados, tornando qualquer tentativa de alteração ou exclusão de um bloco existente inviável, uma vez que tal modificação comprometeria a validação por toda a cadeia \cite{exame}.
+
+Embora teoricamente exista a possibilidade de modificar informações dentro da blockchain, tal feito exigiria um poder computacional exorbitante em um intervalo de tempo incrivelmente curto. Esse desafio, por sua vez, torna-se uma tarefa não apenas complexa, mas também economicamente custosa de ser efetuada. À medida que mais blocos são adicionados à cadeia ao longo do tempo, a rede se expande, elevando consideravelmente o nível de complexidade. Isso resulta em uma barreira crescente para qualquer tentativa de influenciar a rede como um todo, conferindo à blockchain uma robustez e segurança notáveis.
+
+A criptografia SHA-256, gera um hash com base, nas informações do bloco que acaba retornando um valor único por meio de uma operação criptografica. As funções hashs são muito utilizadas no quesito blockchain, a fim de adicionar segurança e imutabilidade \cite{bit2me}.
+
+
+\subsection{História e Evolução da Tecnologia Blockchain}
+
+Esta tecnologia teve sua origem na década de 90 como um banco de dados público e imutável. Somente em 1992, a criptografia foi incorporada ao seu funcionamento, elevando ainda mais a segurança e a integridade dos dados. No entanto, foi somente em 2008, com a criação do Bitcoin, que a blockchain encontrou seu primeiro uso prático e ganhou notoriedade como uma inovação revolucionária no campo da tecnologia da informação \cite{exame}.
+
+Essa abordagem destaca a evolução da blockchain ao longo do tempo, enfatizando seus fundamentos iniciais, os aprimoramentos introduzidos com a criptografia e seu marco significativo com o advento do Bitcoin em 2008.
+
+
+\subsection{Princípios Fundamentais da Blockchain}
+
+\begin{itemize}
+   \item Descentralização
+   \item Consenso comum
+   \item Trasnparência
+    \item Segurança
+   \item Imutabilidade
+   \item Smart Contract
+\end{itemize}
+
+Descentralização implica na dispersão do poder central de uma autoridade, uma abordagem notável na tecnologia blockchain. Ao invés de concentrar todos os dados em um único servidor, a blockchain distribui essas informações entre os nós da rede, constituídos por diversos computadores que mantêm cópias sincronizadas da blockchain.
+
+O consenso, elemento fundamental nesse contexto descentralizado, exige que qualquer informação passe por uma prova de concordância antes de ser adicionada à rede. Qualquer desvio em relação à expectativa impede a adição da informação, garantindo a integridade e confiabilidade do sistema.
+
+A transparência é um princípio vital em blockchains públicas. Todas as transações e modificações são visíveis para todos os participantes da rede, estabelecendo um ambiente transparente que promove a confiança entre os usuários.
+
+A segurança emerge como um catalisador fundamental para o crescente acolhimento da tecnologia, sendo a complexidade intrínseca dos algoritmos de hashing um fator preponderante. Atualmente, a violação destes algoritmos revela-se uma tarefa formidável, sobretudo diante da distância que os computadores quânticos modernos ainda necessitam percorrer para alcançarem tal proeza. Adicionalmente, a estratégia de reforçar a segurança por meio do aumento da quantidade de bits na criptografia se configura como uma abordagem eficaz para tornar esta missão ainda mais improvável.
+Nesse contexto, propõe-se a transição do tradicional SHA-256 para o robusto SHA-512 como medida de fortalecimento da segurança \cite{Cointelegraph}.
+
+A imutabilidade evita que os dados sejam modificados ou excluídos na rede.   
+Esta característica resulta da combinação  do consenso coletivo de segurança criptográfica. 
+Esta união cria uma base sólida  na qual a integridade dos dados é preservada com segurança.  
+Imutabilidade, baseada no consenso  e segurança criptográfica, confiabilidade e inviolabilidade dos registros, constituindo assim  sistemas transparentes e segur
+
+Os Smart Contracts, por sua vez, são como agentes autônomos na rede. São algoritmos programados para aguardar condições específicas antes de executarem suas funções. Ao serem implantados na rede, esses contratos inteligentes permanecem em estado de prontidão, sendo ativados automaticamente quando uma interação específica ocorre, desencadeando funcionalidades previamente programadas \cite{InfoMoney}.
+
+\section{Smart Contracts: Fundamentos e Definições}
+
+Os smart contracts são programas de computador autônomos e autoexecutáveis, incorporados em blockchain, que automatizam e garantem a execução de acordos sem a necessidade de uma autoridade central.
+Esses contratos inteligentes são altamente versáteis e podem ser aplicados em diversas áreas. Embora seu uso seja mais evidente na transferência de valor, propriedade e informações, sua aplicabilidade vai muito além dessas funções essenciais.
+
+
+\subsection{Origens e aplicações práticas}
+O termo "smart contracts" foi cunhado por Nick Szabo em 1993. Szabo, um cientista da computação, propôs a ideia com o objetivo de introduzir práticas avançadas nos protocolos de comércio eletrônico entre indivíduos na internet, eliminando a necessidade de um intermediário central de confiança \cite{vector}. 
+
+ A natureza programável e versátil dos smart contracts permite a implementação efetiva em uma variedade de cenários, incluindo jogos, votações, leilões, apostas, empréstimos e várias outras aplicações.
+
+Atualmente, os smart contracts estão desempenhando um papel fundamental na transformação de setores, proporcionando eficiência, transparência e segurança. Sua capacidade de automatizar a execução de acordos, sem depender de intermediários, tem atraído atenção e adoção crescentes em várias indústrias.
+
+
+
+\subsection{Desenvolvimento em Smart Contract}
+
+Aplicações Descentralizadas (DAAPS) e Organizações Autônomas Descentralizadas (DAOs) são predominantemente aplicações baseadas na web que surgem do desenvolvimento de smart contracts. 
+
+A imutabilidade da blockchain, que impede a alteração de dados uma vez registrados, representa uma característica fundamental desses contratos inteligentes. Isso significa que, uma vez implementado na blockchain, um smart contract não pode ser modificado, são . No entanto, existem métodos programáveis que possibilitam a atualização de smart contracts por meio de um mecanismo conhecido como "smart contract adapter"  \cite{atualizarSM}. Esse adaptador aponta para o endereço do smart contract que será utilizado, permitindo a extensão da mesma interface sem a necessidade de alterar diretamente o contrato existente.
+
+Este processo de atualização proporciona flexibilidade e escalabilidade, pois permite que novas funcionalidades sejam incorporadas ou ajustes sejam feitos sem comprometer a integridade da blockchain. Essa abordagem de atualização programável, combinada com a natureza descentralizada das aplicações baseadas em blockchain, destaca a capacidade única desses sistemas de evoluir e se adaptar ao longo do tempo, sem depender de uma autoridade central. Isso reflete a inovação contínua no campo das tecnologias descentralizadas e ilustra como a combinação de contratos inteligentes e blockchain está moldando o futuro das aplicações na web.

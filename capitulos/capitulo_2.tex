@@ -1,0 +1,42 @@
+%----------------------------------------------------------------------------------
+% Exemplo do uso da classe tcc.cls. Veja o arquivo .cls
+% para mais detalhes e instruções.
+%----------------------------------------------------------------------------------
+\chapter{\label{chap:chap2}Contratos Inteligentes e Privacidade}
+
+Com base em  \cite{GGA}, a consideração sobre modificadores de acesso é frequentemente negligênciada por desenvolvedores de contratos inteligentes. Em contratos inteligentes, o encapsulamento não age como uma medida de segurança efetiva, dado que na blockchain, o acesso à informação é praticamente público para todos os participantes da rede. Embora os modificadores de acesso ajudem a organizar o código e a gerenciar o acesso entre contratos, é crucial compreender que, em blockchains públicas, a visibilidade das informações não é efetivamente controlada por esses modificadores.
+
+O equívoco comum reside na crença de que marcar uma variável como privada a torna segura. No entanto, ao implantar um contrato na blockchain, esse código e todas as suas variáveis associadas são propagados por toda a rede. Isso significa que qualquer indivíduo que possua uma cópia do blockchain terá acesso às informações, independentemente do modificador de acesso.
+
+Em decorrência disso, armazenar dados sigilosos ou delicados em variáveis privadas na blockchain é uma prática arriscada. Torna-se essencial adotar estratégias adicionais, como a criptografia e técnicas de ofuscação, para proteger informações sensíveis, reconhecendo que a simples marcação como "privado" não proporciona o nível de segurança desejado em um ambiente descentralizado e transparente como o das blockchains públicas.
+
+
+\section{Característica dos Contratos Inteligentes}
+
+Conforme discutido anteriormente, nos sistemas de blockchains públicas tradicionais, a natureza distribuída e pública dessas plataformas pode impactar a integridade e a privacidade dos dados. Essa consideração é relevante também neste contexto.
+
+Em blockchains públicas, a visibilidade generalizada dos dados representa um desafio para a confidencialidade, pois qualquer pessoa pode acessar e verificar todas as transações registradas. No entanto, ao empregar tecnologias avançadas como a Zero-Knowledge Proof (Prova de Conhecimento Zero - ZKP), é possível mitigar esses desafios.
+
+A implementação bem-sucedida de ZKP em sistemas blockchain públicos oferece uma solução eficaz para preservar a privacidade, permitindo que informações sensíveis permaneçam ocultas, mesmo em uma infraestrutura distribuída. Isso não apenas aprimora a segurança, mas também mantém a confiança dos usuários, promovendo a aceitação generalizada dessas plataformas.
+
+ 
+
+
+
+\subsection{Desafios de Privacidade em Contratos Inteligentes}
+
+\textbf{Prova de Conhecimento zero: }Com os avanços contínuos na tecnologia, a aplicação de ZKP tem se destacado como uma abordagem significativa para aprimorar a privacidade de dados durante transações em blockchain. A ZKP oferece a capacidade de preservar a confidencialidade de detalhes específicos, mesmo quando os dados da transação são registrados na blockchain.
+
+Em ambientes descentralizados, como contratos inteligentes em decentralized applications (dApps), a implementação da prova de conhecimento zero emerge como uma medida crucial para fortalecer a segurança e atratividade dessas aplicações, especialmente aquelas que lidam com informações sensíveis. Ao incorporar ZKP nos contratos inteligentes, é possível assegurar que, mesmo quando os dados da transação são adicionados à blockchain, certos elementos permaneçam estritamente confidenciais.
+
+Essa abordagem não apenas eleva os padrões de privacidade, mas também posiciona as dApps como soluções mais confiáveis para usuários preocupados com a segurança de seus dados. A capacidade de realizar transações sem divulgar informações específicas não apenas atende às demandas de privacidade, mas também impulsiona a confiança dos usuários em ambientes descentralizados \cite{SMPP}.
+
+\textbf{Armazenamento em Banco de Dados: }De fato, a estratégia de armazenar dados sigilosos em um banco de dados, em vez de registrar tudo na blockchain, é uma abordagem alternativa que aborda preocupações de privacidade, mas ao custo da descentralização. Essa consideração também se aplica aqui.
+
+Ao optar por um banco de dados centralizado para armazenar informações confidenciais, a descentralização inerente às blockchains é comprometida. A dependência de um servidor centralizado introduz um ponto único de falha e potenciais vulnerabilidades de segurança, pois um ataque ou falha nesse servidor pode comprometer todos os dados sensíveis.
+
+Embora essa abordagem possa ser eficaz para proteger a privacidade dos dados, ela entra em conflito com os princípios fundamentais da descentralização que muitos sistemas blockchain visam alcançar. A centralização também implica maior controle e responsabilidade nas mãos da entidade que gerencia o servidor, o que pode gerar desconfiança por parte dos usuários.
+
+Ao avaliar as opções entre descentralização e proteção de dados sigilosos, é fundamental encontrar um equilíbrio que atenda aos requisitos específicos da aplicação. 
+
+ 
