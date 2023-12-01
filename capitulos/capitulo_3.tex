@@ -60,9 +60,9 @@ Em um cenário hipotético, um invasor cria um smart contract, embora de forma m
 
 Após o deploy do contrato malicioso, o atacante aciona a função "attack", realizando um depósito inicial no contrato alvo. Em seguida, ele invoca a função de saque do protocolo vítima, retirando a mesma quantidade recebida no depósito. Quando um smart contract recebe um saldo, a função nativa chamada "receive" é acionada. Embora, por padrão, essa função não execute ações, pode ser adaptada. No interior da função "receive", o invasor insere um código para realizar um novo saque, interrompendo a etapa de atualização do saldo do contrato vítima. Esse ajuste de balanço ocorre após o envio da transação, criando um loop até que o saldo do contrato seja exaurido. Em seguida, o invasor transfere o saldo final para outra conta, concluindo assim o ataque de reentrancy.
 
-\textbf{Gas Griefing Attack \cite{GGA}:} Nos smart contracts de blockchain pública toda escrita é uma transação, e é exigido que toda transação pague uma taxa de gás- as taxas de gás sustentam a rede remunerando os validadores da rede-. 
+\textbf{Gas Griefing Attack \cite{GGA}:} Nos smart contracts de blockchain pública toda escrita é uma transação, e é exigido que toda transação pague uma taxa de gás -as taxas de gás sustentam a rede remunerando os validadores da rede-. 
 Essa técnica consiste em fazer o contrato cobrar uma  taxa absurda ao ponto de zerar o saldo da carteira ou inviabilizar a lógica de negócio do contrato. 
-Os contratos sucetiveis a esse ataque devem ser contratos que transferem dinheiro para outro endereço e disparam a função parão receive. E em contratos que o atacante gostaria de interromper o seu contrato.
+Os contratos sucetiveis a esse ataque devem ser contratos que transferem dinheiro para outro endereço e disparam a função padrão receive, ou então em contratos que o atacante gostaria de interromper.
 \begin{figure}
     \centering
     \includegraphics[width=0.5\linewidth]{figuras/Auction.png}
@@ -81,7 +81,7 @@ Essa lógica de leilão busca promover a competição entre os participantes, ga
     \label{fig:enter-label}
 \end{figure}
 
-O contrato do atacante opera em consonância com o contrato do leilão, submetendo uma oferta superior à do atual líder. Quando outro participante oferece um lance superior ao do atacante, a função "receive" do contrato do atacante é invocada. Se o código presente em "receive" for extenso ou complexo, isso pode acarretar em aumento das taxas devido à alocação de memória, podendo até ultrapassar o limite permitido para uma transação.
+O contrato do atacante opera em consonância com o contrato do leilão, submetendo uma oferta superior à do atual líder. Quando outro participante oferece um lance superior ao do atacante, a função "receive" do contrato do atacante é invocada. Se o código presente em "receive"  for extenso ou complexo, isso pode acarretar em aumento das taxas devido à alocação de memória, podendo até ultrapassar o limite permitido para uma transação.
 
 Quando um desses dois obstáculos ocorre, o contrato inteligente entra em um estado de erro, revertendo a transação original e mantendo o atacante como vencedor do leilão. Importante notar que o usuário que acionou a função enfrentará a perda de uma considerável quantia de gás da carteira, e em alguns casos, todo o valor destinado ao pagamento das taxas de transação.
 
