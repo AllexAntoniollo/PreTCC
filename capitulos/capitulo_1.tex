@@ -1,22 +1,7 @@
-%----------------------------------------------------------------------------------
-% Exemplo do uso da classe tcc.cls. Veja o arquivo .cls
-% para mais detalhes e instruções.
-%----------------------------------------------------------------------------------
+
 \chapter{Introdução}
 \label{chap:intro}
-% Comando para inserir siglas. As siglas devem aparecer em ordem ALFABÉTICA nas listas
-% correspondentes. Como a classe no momento não é capaz de ordenar
-% as entradas automaticamente, existem duas alternativas:
-%
-%    a- Insira todas as siglas no começo do texto,
-%    manualmente e em ordem alfabética.
-%
-%    b- Caso esteja em um ambiente UNIX (Linux, Mac ou Cygwin/similares),
-%    utilize o script sort.sh e o makefile que acompanham a
-%    classe. O makefile automaticamente compila a monografia para
-%    PDF (mas assume que o latex está acessível pela linha de
-%    comando). Neste caso a ordenação é feita de forma automática.
-%
+
 \sigla{btc}{Bitcoin}
 \sigla{BC}{Blockchain}
 \sigla{SM}{Smart Contract}
@@ -24,15 +9,6 @@
 \sigla{DAAPS}{Aplicações Descentralizadas}
 \sigla{DAOs}{Organizações Autônomas Descentralizadas}
 \sigla{GGA}{Gas Griefing Attack}
-
-
-
-%
-%
-% Comando para inserir símbolos. Estes irão aparecer em ordem
-% de ocorrência, já que o número da página está presente na lista
-% de símbolos.
-
 
 \begin{itemize}
 \item Introdução e Contextualização
@@ -124,6 +100,6 @@ Atualmente, os smart contracts estão desempenhando um papel fundamental na tran
 
 Aplicações Descentralizadas (DAAPS) e Organizações Autônomas Descentralizadas (DAOs) são predominantemente aplicações baseadas na web que surgem do desenvolvimento de smart contracts. 
 
-A imutabilidade da blockchain, que impede a alteração de dados uma vez registrados, representa uma característica fundamental desses contratos inteligentes. Isso significa que, uma vez implementado na blockchain, um smart contract não pode ser modificado, são . No entanto, existem métodos programáveis que possibilitam a atualização de smart contracts por meio de um mecanismo conhecido como "smart contract adapter"  \cite{atualizarSM}. Esse adaptador aponta para o endereço do smart contract que será utilizado, permitindo a extensão da mesma interface sem a necessidade de alterar diretamente o contrato existente.
+A imutabilidade da blockchain, que impede a alteração de dados uma vez registrados, representa uma característica fundamental desses contratos inteligentes. Isso significa que, uma vez implementado na blockchain, um smart contract não pode ser modificado. No entanto, existem métodos programáveis que possibilitam a atualização de smart contracts por meio de um mecanismo conhecido como "smart contract adapter"  \cite{atualizarSM}. Esse adaptador aponta para o endereço do smart contract que será utilizado, permitindo a extensão da mesma interface sem a necessidade de alterar diretamente o contrato existente.
 
 Este processo de atualização proporciona flexibilidade e escalabilidade, pois permite que novas funcionalidades sejam incorporadas ou ajustes sejam feitos sem comprometer a integridade da blockchain. Essa abordagem de atualização programável, combinada com a natureza descentralizada das aplicações baseadas em blockchain, destaca a capacidade única desses sistemas de evoluir e se adaptar ao longo do tempo, sem depender de uma autoridade central. Isso reflete a inovação contínua no campo das tecnologias descentralizadas e ilustra como a combinação de contratos inteligentes e blockchain está moldando o futuro das aplicações na web.

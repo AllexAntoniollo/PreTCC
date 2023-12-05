@@ -852,10 +852,9 @@
 \newcommand{\PP@epigrafe}[2]{%
     \hbox to\textwidth{%
         \hss\vbox{%
-           \hsize=3.32in
+           \hsize=3.5in
            \parindent0pt
           ``#1''\par
-          (#2)\relax
         }%
     }%
 }
